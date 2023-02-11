@@ -405,7 +405,7 @@ class MirrorLeechListener:
                     msg += f'\n<b>├ Corrupted Files: </b>{typ}'
             if config_dict['EMOJI_THEME']:
                 msg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰👤 #Leech_by: </b>{self.tag}\nTham gia teamdrive để có qyền truy cập file nhé\n'
+                msg += f'\n<b>╰👤 #Leech_by: </b>{self.tag}\n🔞 = BANNED\n'
             else: 
                 msg += f'\n<b>├ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
                 msg += f'\n<b>╰ #Leech_by: </b>{self.tag}\n\n'
@@ -477,7 +477,7 @@ class MirrorLeechListener:
                     msg += f'\n<b>├ Files: </b>{files}'
             if config_dict['EMOJI_THEME']:
                 msg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\nTham gia teamdrive để có qyền truy cập file nhé\n'
+                msg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\n🔞 = BANNED\n'
             else:
                 msg += f'\n<b>├ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
                 msg += f'\n<b>╰ #Mirror_By: </b>{self.tag}\n\n' 
@@ -602,20 +602,20 @@ class MirrorLeechListener:
                 bmsg += f'\n<b>├🗃️ SubFolders: </b>{folders}'
                 bmsg += f'\n<b>├🗂️ Files: </b>{files}'
                 bmsg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                bmsg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\nTham gia teamdrive để có qyền truy cập file nhé\n'
+                bmsg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\n🔞 = BANNED\n'
             else:
                 bmsg = f"<b>Name: </b><{config_dict['NAME_FONT']}>{escape(name)}</{config_dict['NAME_FONT']}>\n"
                 bmsg += f'\n<b>├📦 Type: </b>{typ}'
                 bmsg += f'\n<b>├🗃️ SubFolders: </b>{folders}'
                 bmsg += f'\n<b>├🗂️ Files: </b>{files}'
                 bmsg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                bmsg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\nTham gia teamdrive để có qyền truy cập file nhé\n'
-            #botpm = f"<b>\nHey {self.tag}!, File được gửi vào tin nhắn rồi đó\nI have sent your stuff in PM.\n Tham gia teamdrive để có quyền truy cập nhé</b>\n"
+                bmsg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\n🔞 = BANNED\n'
+            #botpm = f"<b>\nHey {self.tag}!, File được gửi vào tin nhắn rồi đó\nI have sent your stuff in PM.\n</b>\n"
             buttons = ButtonMaker()
             b_uname = bot.get_me().username
             botstart = f"http://t.me/{b_uname}"
-            buttons.buildbutton("⚡ Index Link", share_url)
-            buttons.buildbutton("Teamdrive", f"https://groups.google.com/g/bot-up-qua-drive")
+            buttons.buildbutton("⚡ Invite Link", share_url)
+            buttons.buildbutton("Teamdrive", f"https://t.me/m2dpublic")
 
             if config_dict['PICS']:
                 sendPhoto(bmsg + botpm, self.bot, self.message, choice(config_dict['PICS']), buttons.build_menu(2))
